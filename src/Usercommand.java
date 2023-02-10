@@ -7,7 +7,7 @@ public class Usercommand {
         int z=0;
         while(n>=0)
         {
-            System.out.println("Enter the number");
+            System.out.println("Enter the number ");
             n=s.nextInt();
             if(n>0){
             z=z+n;}
