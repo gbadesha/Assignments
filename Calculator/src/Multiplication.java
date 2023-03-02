@@ -1,2 +1,11 @@
-package PACKAGE_NAME;public class Multiplication {
+public class Multiplication {
+    public static void mul(int[] array){
+        int a=array[0];
+        for(int i=1;i<array.length; i++){
+            a=a*array[i];
+
+        }
+        System.out.println("multiplication of entered numbers is " + a);
+
+    }
 }

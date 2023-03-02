@@ -11,7 +11,7 @@ public class LargestWordInParagraph {
             big=s1[i];
 
         } else if (s1[i].length()==l) {
-                big=big.concat("   ");
+                big=big.concat(" , ");
                 big=big.concat(s1[i]);
 
                 

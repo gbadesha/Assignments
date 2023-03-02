@@ -3,11 +3,47 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the text");
-        String s1= sc.nextLine();
-       // String s1 = "USS Indiana was the lead ship of her class and the first battleship in the United States Navy comparable to foreign battleships of the time. Authorized in 1890, she was launched on 28 February 1893 and commissioned on 20 November 1895. The ship pioneered the use of an intermediate battery. Indiana served in the Spanish–American War as part of the North Atlantic Squadron and took part in the blockade of Santiago de Cuba and the battle of Santiago de Cuba. After the war she became obsolete—despite several modernizations—and spent most of her time in commission as a training ship or in the reserve fleet, with her last commission during World War I as a training ship for gun crews. She was decommissioned for the third and final time in January 1919 and was shortly after renamed Coast Battleship Number 1 so that the name Indiana could be reused. She was sunk in shallow water as a target in aerial bombing tests in 1920 and her hull was sold for scrap in 1924. (Full article...)oked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.";
-        LargestWordInParagraph obj1= new LargestWordInParagraph();
-        obj1.LargestWord(s1);
+
+
+        String s1,s2;
+        int i=0;
+        do{
+        System.out.println("Enter \n 1 to split a string\n 2 to concatenate strings \n 3 to find largest word in text \n 4 to print a substring \n Enter 5 for exit");
+        i=sc.nextInt();
+        switch(i) {
+            case 1:
+                SplitString obj1 = new SplitString();
+                obj1.split();
+                break;
+
+            case 2:
+                Scanner sc2 = new Scanner(System.in);
+                Scanner sc3 = new Scanner(System.in);
+                System.out.println("Enter first string");
+                s1 = sc2.nextLine();
+                System.out.println("Enter second string");
+                s2 = sc3.nextLine();
+                ConcatenateStrings obj = new ConcatenateStrings();
+                obj.Concat(s1, s2);
+                break;
+            case 3:
+                Scanner sc4 = new Scanner(System.in);
+                System.out.println("Enter the text");
+                s1 = sc4.nextLine();
+                // String s1 = "USS Indiana was the lead ship of her class and the first battleship in the United States Navy comparable to foreign battleships of the time. Authorized in 1890, she was launched on 28 February 1893 and commissioned on 20 November 1895. The ship pioneered the use of an intermediate battery. Indiana served in the Spanish–American War as part of the North Atlantic Squadron and took part in the blockade of Santiago de Cuba and the battle of Santiago de Cuba. After the war she became obsolete—despite several modernizations—and spent most of her time in commission as a training ship or in the reserve fleet, with her last commission during World War I as a training ship for gun crews. She was decommissioned for the third and final time in January 1919 and was shortly after renamed Coast Battleship Number 1 so that the name Indiana could be reused. She was sunk in shallow water as a target in aerial bombing tests in 1920 and her hull was sold for scrap in 1924. (Full article...)oked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.";
+                LargestWordInParagraph obj2 = new LargestWordInParagraph();
+                obj2.LargestWord(s1);
+                break;
+            case 4:
+                SubString obj3 = new SubString();
+                obj3.PrintSubString();
+                break;
+            case 5:
+                break;
+                default:
+                System.out.println(" Wrong input please try again");
+                //goto k;
+        }} while(i!=5);
         /*String s2 = s1.substring(2);// it will print llo world
         String s3 = s1.substring(2, 2);
         int firstlocation = s1.indexOf("o");
@@ -31,4 +67,7 @@ public class Main {
 
 
         System.out.println("printing location of 6 string" + s7[6]);*/
-    }}
+        System.out.println(" Good Bye");
+
+    }
+}
